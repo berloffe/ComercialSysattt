@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComClassSys;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,26 @@ namespace ComercialSys
         public FrmCliente()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
