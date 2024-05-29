@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             dgvUsuarios = new DataGridView();
+            clnId = new DataGridViewTextBoxColumn();
+            clnNome = new DataGridViewTextBoxColumn();
+            clnSigla = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
+            btnConsultar = new Button();
             btnDeletar = new Button();
             btnEditar = new Button();
             btnInserir = new Button();
@@ -40,10 +44,6 @@
             label3 = new Label();
             txtId = new TextBox();
             txtBusca = new TextBox();
-            btnConsultar = new Button();
-            clnId = new DataGridViewTextBoxColumn();
-            clnNome = new DataGridViewTextBoxColumn();
-            clnSigla = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -60,6 +60,30 @@
             dgvUsuarios.RowHeadersVisible = false;
             dgvUsuarios.Size = new Size(500, 150);
             dgvUsuarios.TabIndex = 6;
+            // 
+            // clnId
+            // 
+            clnId.Frozen = true;
+            clnId.HeaderText = "ID";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
+            clnId.Width = 40;
+            // 
+            // clnNome
+            // 
+            clnNome.Frozen = true;
+            clnNome.HeaderText = "Nome";
+            clnNome.Name = "clnNome";
+            clnNome.ReadOnly = true;
+            clnNome.Width = 210;
+            // 
+            // clnSigla
+            // 
+            clnSigla.Frozen = true;
+            clnSigla.HeaderText = "Sigla";
+            clnSigla.Name = "clnSigla";
+            clnSigla.ReadOnly = true;
+            clnSigla.Width = 180;
             // 
             // groupBox1
             // 
@@ -79,6 +103,16 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados de usuário";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // btnConsultar
+            // 
+            btnConsultar.Location = new Point(145, 183);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(75, 23);
+            btnConsultar.TabIndex = 8;
+            btnConsultar.Text = "&Consultar";
+            btnConsultar.UseVisualStyleBackColor = true;
             // 
             // btnDeletar
             // 
@@ -163,39 +197,6 @@
             txtBusca.PlaceholderText = "Digite pelo menos duas letras para pesquisar usuário";
             txtBusca.Size = new Size(501, 23);
             txtBusca.TabIndex = 5;
-            // 
-            // btnConsultar
-            // 
-            btnConsultar.Location = new Point(145, 183);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(75, 23);
-            btnConsultar.TabIndex = 8;
-            btnConsultar.Text = "&Consultar";
-            btnConsultar.UseVisualStyleBackColor = true;
-            // 
-            // clnId
-            // 
-            clnId.Frozen = true;
-            clnId.HeaderText = "ID";
-            clnId.Name = "clnId";
-            clnId.ReadOnly = true;
-            clnId.Width = 40;
-            // 
-            // clnNome
-            // 
-            clnNome.Frozen = true;
-            clnNome.HeaderText = "Nome";
-            clnNome.Name = "clnNome";
-            clnNome.ReadOnly = true;
-            clnNome.Width = 210;
-            // 
-            // clnSigla
-            // 
-            clnSigla.Frozen = true;
-            clnSigla.HeaderText = "Sigla";
-            clnSigla.Name = "clnSigla";
-            clnSigla.ReadOnly = true;
-            clnSigla.Width = 180;
             // 
             // Categoria
             // 

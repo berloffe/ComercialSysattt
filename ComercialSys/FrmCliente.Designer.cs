@@ -39,6 +39,7 @@
             clnTipoEndereco = new DataGridViewTextBoxColumn();
             tabControl1 = new TabControl();
             tbpDadosPessoais = new TabPage();
+            txtClienteId = new TextBox();
             btnEditar = new Button();
             btnInsert = new Button();
             label4 = new Label();
@@ -163,6 +164,7 @@
             // 
             // tbpDadosPessoais
             // 
+            tbpDadosPessoais.Controls.Add(txtClienteId);
             tbpDadosPessoais.Controls.Add(btnEditar);
             tbpDadosPessoais.Controls.Add(btnInsert);
             tbpDadosPessoais.Controls.Add(label4);
@@ -184,6 +186,16 @@
             tbpDadosPessoais.Text = "Dados pessoais";
             tbpDadosPessoais.UseVisualStyleBackColor = true;
             // 
+            // txtClienteId
+            // 
+            txtClienteId.Location = new Point(309, 113);
+            txtClienteId.Multiline = true;
+            txtClienteId.Name = "txtClienteId";
+            txtClienteId.Size = new Size(100, 23);
+            txtClienteId.TabIndex = 16;
+            txtClienteId.Text = "0";
+            txtClienteId.Visible = false;
+            // 
             // btnEditar
             // 
             btnEditar.Location = new Point(143, 162);
@@ -192,6 +204,7 @@
             btnEditar.TabIndex = 15;
             btnEditar.Text = "&Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnInsert
             // 
@@ -201,11 +214,12 @@
             btnInsert.TabIndex = 14;
             btnInsert.Text = "&Inserir";
             btnInsert.UseVisualStyleBackColor = true;
+            btnInsert.Click += btnInsert_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(150, 101);
+            label4.Location = new Point(150, 92);
             label4.Name = "label4";
             label4.Size = new Size(114, 15);
             label4.TabIndex = 13;
@@ -230,7 +244,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(31, 101);
+            label3.Location = new Point(31, 92);
             label3.Name = "label3";
             label3.Size = new Size(51, 15);
             label3.TabIndex = 10;
@@ -239,29 +253,32 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(134, 55);
+            label2.Location = new Point(134, 46);
             label2.Name = "label2";
             label2.Size = new Size(36, 15);
             label2.TabIndex = 9;
             label2.Text = "Email";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(31, 55);
+            label1.Location = new Point(25, 49);
             label1.Name = "label1";
             label1.Size = new Size(28, 15);
             label1.TabIndex = 8;
             label1.Text = "CPF";
+            label1.Click += label1_Click;
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(31, 14);
+            lblNome.Location = new Point(24, 5);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(40, 15);
             lblNome.TabIndex = 7;
             lblNome.Text = "Nome";
+            lblNome.Click += lblNome_Click;
             // 
             // chkAtivo
             // 
@@ -289,7 +306,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(130, 64);
+            txtEmail.Location = new Point(134, 64);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(291, 23);
             txtEmail.TabIndex = 4;
@@ -598,5 +615,6 @@
         private Label label14;
         private Label label11;
         private GroupBox groupBox1;
+        private TextBox txtClienteId;
     }
 }

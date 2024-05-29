@@ -70,11 +70,11 @@ namespace ComClassSys
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_cliente_insert";
-            cmd.Parameters.AddWithValue("spnome", Nome);
-            cmd.Parameters.AddWithValue("spcpf", Cpf);
-            cmd.Parameters.AddWithValue("sptelefone", Telefone);
-            cmd.Parameters.AddWithValue("spemail", Email);
-            cmd.Parameters.AddWithValue("spdatanasc", DataNasc);
+            cmd.Parameters.AddWithValue("sp_nome", Nome);
+            cmd.Parameters.AddWithValue("sp_cpf", Cpf);
+            cmd.Parameters.AddWithValue("sp_telefone", Telefone);
+            cmd.Parameters.AddWithValue("sp_email", Email);
+            cmd.Parameters.AddWithValue("sp_data_nasc", DataNasc);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
 
         }
