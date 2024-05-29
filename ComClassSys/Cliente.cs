@@ -127,16 +127,17 @@ namespace ComClassSys
             }
             return clientes;
         }
+        
         public bool Editar(int id)
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_cliente_update";
-            cmd.Parameters.AddWithValue("spnome", Nome);
-            cmd.Parameters.AddWithValue("spid", id);
-            cmd.Parameters.AddWithValue("sptelefone", Telefone);
-            cmd.Parameters.AddWithValue("spemail", Email);
-            cmd.Parameters.AddWithValue("spdatanasc", DataNasc);
+            cmd.Parameters.AddWithValue("sp_id", Id);
+            cmd.Parameters.AddWithValue("sp_nome", Nome);
+            cmd.Parameters.AddWithValue("sp_telefone", Telefone);
+            cmd.Parameters.AddWithValue("sp_email", Email);
+            cmd.Parameters.AddWithValue("sp_data_nasc", DataNasc);
             // if (se) ternário
             //     [      condição      ] [?] então [:] senão
             return cmd.ExecuteNonQuery() > -1 ? true : false;

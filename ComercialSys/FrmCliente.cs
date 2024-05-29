@@ -112,5 +112,31 @@ namespace ComercialSys
         {
 
         }
+
+        private void btnAdiciona_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mxtCEP_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+
+        }
+
+        private void mxtCEP_Leave(object sender, EventArgs e)
+        {
+            mxtCEP.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            if (mxtCEP.Text.Length == 8)
+            {
+                WebCEP webCEP = new(mxtCEP.Text);
+                txtLogradouro.Text = webCEP.TipoLagradouro + " " + webCEP.Lagradouro;
+                txtBairros.Text = webCEP.Bairro;
+                txtCidade.Text = webCEP.Cidade;
+                txtUf.Text = webCEP.UF;
+                txtNumero.Focus();
+
+            }
+        }
     }
 }

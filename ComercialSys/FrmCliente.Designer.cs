@@ -69,7 +69,7 @@
             cmbTipoEndereco = new ComboBox();
             txtUf = new TextBox();
             txtCidade = new TextBox();
-            textBox1 = new TextBox();
+            txtBairros = new TextBox();
             txtBairro = new TextBox();
             txtComplemento = new TextBox();
             txtNumero = new TextBox();
@@ -335,7 +335,7 @@
             tbpEnderecos.Controls.Add(cmbTipoEndereco);
             tbpEnderecos.Controls.Add(txtUf);
             tbpEnderecos.Controls.Add(txtCidade);
-            tbpEnderecos.Controls.Add(textBox1);
+            tbpEnderecos.Controls.Add(txtBairros);
             tbpEnderecos.Controls.Add(txtBairro);
             tbpEnderecos.Controls.Add(txtComplemento);
             tbpEnderecos.Controls.Add(txtNumero);
@@ -457,6 +457,7 @@
             btnAdiciona.TabIndex = 9;
             btnAdiciona.Text = "Adicionar &Novo";
             btnAdiciona.UseVisualStyleBackColor = true;
+            btnAdiciona.Click += btnAdiciona_Click;
             // 
             // btnSalvar
             // 
@@ -493,12 +494,12 @@
             txtCidade.Size = new Size(145, 23);
             txtCidade.TabIndex = 5;
             // 
-            // textBox1
+            // txtBairros
             // 
-            textBox1.Location = new Point(178, 78);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(120, 23);
-            textBox1.TabIndex = 4;
+            txtBairros.Location = new Point(178, 78);
+            txtBairros.Name = "txtBairros";
+            txtBairros.Size = new Size(120, 23);
+            txtBairros.TabIndex = 4;
             // 
             // txtBairro
             // 
@@ -535,6 +536,8 @@
             mxtCEP.Name = "mxtCEP";
             mxtCEP.Size = new Size(79, 23);
             mxtCEP.TabIndex = 0;
+            mxtCEP.MaskInputRejected += mxtCEP_MaskInputRejected;
+            mxtCEP.Leave += mxtCEP_Leave;
             // 
             // groupBox1
             // 
@@ -609,7 +612,7 @@
         private Label label9;
         private Label label8;
         private Label label7;
-        private TextBox textBox1;
+        private TextBox txtBairros;
         private Label label13;
         private Label label12;
         private Label label14;
