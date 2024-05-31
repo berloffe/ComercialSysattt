@@ -59,9 +59,7 @@
             label12 = new Label();
             label14 = new Label();
             label11 = new Label();
-            label10 = new Label();
             label9 = new Label();
-            label8 = new Label();
             label7 = new Label();
             label5 = new Label();
             btnAdiciona = new Button();
@@ -325,9 +323,7 @@
             tbpEnderecos.Controls.Add(label12);
             tbpEnderecos.Controls.Add(label14);
             tbpEnderecos.Controls.Add(label11);
-            tbpEnderecos.Controls.Add(label10);
             tbpEnderecos.Controls.Add(label9);
-            tbpEnderecos.Controls.Add(label8);
             tbpEnderecos.Controls.Add(label7);
             tbpEnderecos.Controls.Add(label5);
             tbpEnderecos.Controls.Add(btnAdiciona);
@@ -372,7 +368,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(357, 60);
+            label12.Location = new Point(375, 60);
             label12.Name = "label12";
             label12.Size = new Size(44, 15);
             label12.TabIndex = 10;
@@ -399,35 +395,15 @@
             label11.Text = "Bairro";
             label11.Click += label5_Click;
             // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(455, 60);
-            label10.Name = "label10";
-            label10.Size = new Size(21, 15);
-            label10.TabIndex = 10;
-            label10.Text = "UF";
-            label10.Click += label5_Click;
-            // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(455, 60);
+            label9.Location = new Point(470, 60);
             label9.Name = "label9";
             label9.Size = new Size(21, 15);
             label9.TabIndex = 10;
             label9.Text = "UF";
             label9.Click += label5_Click;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(455, 60);
-            label8.Name = "label8";
-            label8.Size = new Size(21, 15);
-            label8.TabIndex = 10;
-            label8.Text = "UF";
-            label8.Click += label5_Click;
             // 
             // label7
             // 
@@ -482,23 +458,23 @@
             // 
             // txtUf
             // 
-            txtUf.Location = new Point(455, 78);
+            txtUf.Location = new Point(470, 78);
             txtUf.Name = "txtUf";
-            txtUf.Size = new Size(36, 23);
+            txtUf.Size = new Size(21, 23);
             txtUf.TabIndex = 6;
             // 
             // txtCidade
             // 
-            txtCidade.Location = new Point(304, 78);
+            txtCidade.Location = new Point(319, 78);
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(145, 23);
             txtCidade.TabIndex = 5;
             // 
             // txtBairros
             // 
-            txtBairros.Location = new Point(178, 78);
+            txtBairros.Location = new Point(171, 78);
             txtBairros.Name = "txtBairros";
-            txtBairros.Size = new Size(120, 23);
+            txtBairros.Size = new Size(142, 23);
             txtBairros.TabIndex = 4;
             // 
             // txtBairro
@@ -512,7 +488,7 @@
             // 
             txtComplemento.Location = new Point(19, 78);
             txtComplemento.Name = "txtComplemento";
-            txtComplemento.Size = new Size(153, 23);
+            txtComplemento.Size = new Size(134, 23);
             txtComplemento.TabIndex = 3;
             // 
             // txtNumero
@@ -608,9 +584,7 @@
         private MaskedTextBox mxtCEP;
         private Label label5;
         private Label label6;
-        private Label label10;
         private Label label9;
-        private Label label8;
         private Label label7;
         private TextBox txtBairros;
         private Label label13;

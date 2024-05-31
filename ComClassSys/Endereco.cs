@@ -73,7 +73,7 @@ namespace ComClassSys
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_cliente_update";
-            cmd.Parameters.AddWithValue("sp_id", Id);
+            cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spcliente_id", ClienteId);
             cmd.Parameters.AddWithValue("spcep", Cep);
             cmd.Parameters.AddWithValue("splogradouro", Logradouro);
