@@ -15,8 +15,7 @@ namespace ComClassSys
         public string Descricao { get; set; }
         public double ValoUnit { get; set; }
         public string UnidadeVenda { get; set; }
-        public int Categoria { get; set; }
-        public double CategoriaId { get; set; }
+        public int CategoriaId { get; set; }
         public double EstoqueMinimo { get; set; }
         public double ClasseDesconto { get; set; }
         public string Imagem { get; set; }
@@ -26,39 +25,38 @@ namespace ComClassSys
         {
             Id = 0;
         }
-        public Produto(int id, string codBarras, string descricao, double valoUnit, string unidadeVenda, int categoria, double categoriaId, double estoqueMinimo, double classeDesconto, string imagem, DateTime dataCad)
+        public Produto(int id, string codBarras, string descricao, double valoUnit, string unidadeVenda, int categoriaId, double estoqueMinimo, double classeDesconto, string imagem, DateTime dataCad)
         {
             Id = id;
             CodBarras = codBarras;
             Descricao = descricao;
             ValoUnit = valoUnit;
             UnidadeVenda = unidadeVenda;
-            Categoria = categoria;
             CategoriaId = categoriaId;
             EstoqueMinimo = estoqueMinimo;
             ClasseDesconto = classeDesconto;
             Imagem = imagem;
             DataCad = dataCad;
         }
-        public Produto(string codBarras, string descricao, double valoUnit, string unidadeVenda, int categoria, double categoriaId, double estoqueMinimo, double classeDesconto, string imagem)
+        public Produto(string codBarras, string descricao, double valoUnit, string unidadeVenda, int categoriaId, double estoqueMinimo, double classeDesconto, string imagem)
         {
             CodBarras = codBarras;
             Descricao = descricao;
             ValoUnit = valoUnit;
             UnidadeVenda = unidadeVenda;
-            Categoria = categoria;
             CategoriaId = categoriaId;
             EstoqueMinimo = estoqueMinimo;
             ClasseDesconto = classeDesconto;
             Imagem = imagem;
         }
-        public Produto(string codBarras, string descricao, double valoUnit, string unidadeVenda, int categoria, double estoqueMinimo, double classeDesconto)
+        public Produto(string codBarras, string descricao, double valoUnit, string unidadeVenda, int categoriaId, double estoqueMinimo, double classeDesconto)
         {
             CodBarras = codBarras;
             Descricao = descricao;
             ValoUnit = valoUnit;
             UnidadeVenda = unidadeVenda;
-            Categoria = categoria;
+            CategoriaId = categoriaId;
+            EstoqueMinimo = estoqueMinimo;
             ClasseDesconto = classeDesconto;
         }
         public void Inserir()
@@ -70,8 +68,10 @@ namespace ComClassSys
             cmd.Parameters.AddWithValue("spdescricao", Descricao);
             cmd.Parameters.AddWithValue("spvalor_unit", ValoUnit);
             cmd.Parameters.AddWithValue("spunidade_venda", UnidadeVenda);
-            cmd.Parameters.AddWithValue("sp_categoria_id", Categoria);
+            cmd.Parameters.AddWithValue("spcategoria_id", CategoriaId);
+            cmd.Parameters.AddWithValue("spestoque_minimo",EstoqueMinimo);
             cmd.Parameters.AddWithValue("spclasse_desconto", ClasseDesconto);
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
         }
     }
 }

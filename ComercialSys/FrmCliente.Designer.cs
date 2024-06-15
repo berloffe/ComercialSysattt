@@ -183,6 +183,7 @@
             tbpDadosPessoais.TabIndex = 0;
             tbpDadosPessoais.Text = "Dados pessoais";
             tbpDadosPessoais.UseVisualStyleBackColor = true;
+            tbpDadosPessoais.Click += tbpDadosPessoais_Click;
             // 
             // txtClienteId
             // 
@@ -525,6 +526,7 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // FrmCliente
             // 

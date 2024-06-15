@@ -9,10 +9,9 @@ namespace ComercialSys
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCliente frmCliente = new FrmCliente();
-            frmCliente.MdiParent = this;
-            frmCliente.StartPosition = FormStartPosition.CenterScreen;
-            frmCliente.Show();
+          FrmCliente frmCliente = new FrmCliente();
+          frmCliente.MdiParent = this;
+          frmCliente.Show();
 
         }
 
@@ -26,6 +25,13 @@ namespace ComercialSys
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void novoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmProduto frmProduto = new FrmProduto();
+            frmProduto.MdiParent = this;
+            frmProduto.Show();
         }
     }
 }

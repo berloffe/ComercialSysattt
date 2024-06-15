@@ -68,20 +68,20 @@
             cToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { novoToolStripMenuItem, consultarToolStripMenuItem });
             cToolStripMenuItem.Image = Properties.Resources.User;
             cToolStripMenuItem.Name = "cToolStripMenuItem";
-            cToolStripMenuItem.Size = new Size(117, 22);
+            cToolStripMenuItem.Size = new Size(180, 22);
             cToolStripMenuItem.Text = "C&liente";
             // 
             // novoToolStripMenuItem
             // 
             novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            novoToolStripMenuItem.Size = new Size(125, 22);
+            novoToolStripMenuItem.Size = new Size(180, 22);
             novoToolStripMenuItem.Text = "&Novo";
             novoToolStripMenuItem.Click += novoToolStripMenuItem_Click;
             // 
             // consultarToolStripMenuItem
             // 
             consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            consultarToolStripMenuItem.Size = new Size(125, 22);
+            consultarToolStripMenuItem.Size = new Size(180, 22);
             consultarToolStripMenuItem.Text = "&Consultar";
             // 
             // produtoToolStripMenuItem
@@ -89,25 +89,26 @@
             produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { novoToolStripMenuItem1, consultarToolStripMenuItem1 });
             produtoToolStripMenuItem.Image = Properties.Resources.chair_256;
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            produtoToolStripMenuItem.Size = new Size(117, 22);
+            produtoToolStripMenuItem.Size = new Size(180, 22);
             produtoToolStripMenuItem.Text = "&Produto";
             // 
             // novoToolStripMenuItem1
             // 
             novoToolStripMenuItem1.Name = "novoToolStripMenuItem1";
-            novoToolStripMenuItem1.Size = new Size(125, 22);
+            novoToolStripMenuItem1.Size = new Size(180, 22);
             novoToolStripMenuItem1.Text = "&Novo";
+            novoToolStripMenuItem1.Click += novoToolStripMenuItem1_Click;
             // 
             // consultarToolStripMenuItem1
             // 
             consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            consultarToolStripMenuItem1.Size = new Size(125, 22);
+            consultarToolStripMenuItem1.Size = new Size(180, 22);
             consultarToolStripMenuItem1.Text = "&Consultar";
             // 
             // usuárioToolStripMenuItem
             // 
             usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            usuárioToolStripMenuItem.Size = new Size(117, 22);
+            usuárioToolStripMenuItem.Size = new Size(180, 22);
             usuárioToolStripMenuItem.Text = "&Usuário";
             usuárioToolStripMenuItem.Click += usuárioToolStripMenuItem_Click;
             // 

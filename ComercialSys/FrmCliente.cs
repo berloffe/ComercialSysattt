@@ -85,6 +85,7 @@ namespace ComercialSys
                 , mstTelefone.Text
                 , txtEmail.Text
                 , dtpDataNasc.Value
+
                 );
             cliente.Inserir();
             if (cliente.Id > 0)
@@ -137,6 +138,16 @@ namespace ComercialSys
                 txtNumero.Focus();
 
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbpDadosPessoais_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
