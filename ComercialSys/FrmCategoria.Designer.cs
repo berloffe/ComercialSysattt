@@ -1,6 +1,6 @@
 ﻿namespace ComercialSys
 {
-    partial class Categoria
+    partial class FrmCategoria
     {
         /// <summary>
         /// Required designer variable.

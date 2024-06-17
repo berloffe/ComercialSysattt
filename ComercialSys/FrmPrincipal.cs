@@ -9,9 +9,9 @@ namespace ComercialSys
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          FrmCliente frmCliente = new FrmCliente();
-          frmCliente.MdiParent = this;
-          frmCliente.Show();
+            FrmCliente frmCliente = new FrmCliente();
+            frmCliente.MdiParent = this;
+            frmCliente.Show();
 
         }
 
@@ -32,6 +32,13 @@ namespace ComercialSys
             FrmProduto frmProduto = new FrmProduto();
             frmProduto.MdiParent = this;
             frmProduto.Show();
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           FrmCategoria frmcategoria = new FrmCategoria();
+            frmcategoria.MdiParent = this;
+            frmcategoria.Show();
         }
     }
 }
