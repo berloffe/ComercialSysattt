@@ -50,21 +50,21 @@
             txtCategoria.Location = new Point(204, 205);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(190, 23);
-            txtCategoria.TabIndex = 0;
+            txtCategoria.TabIndex = 4;
             // 
             // txtDescricao
             // 
             txtDescricao.Location = new Point(204, 118);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(190, 23);
-            txtDescricao.TabIndex = 0;
+            txtDescricao.TabIndex = 1;
             // 
             // txtClasseDesconto
             // 
             txtClasseDesconto.Location = new Point(204, 263);
             txtClasseDesconto.Name = "txtClasseDesconto";
             txtClasseDesconto.Size = new Size(190, 23);
-            txtClasseDesconto.TabIndex = 0;
+            txtClasseDesconto.TabIndex = 6;
             // 
             // mskCodigo
             // 
@@ -72,12 +72,11 @@
             mskCodigo.Mask = "0 000000 000000";
             mskCodigo.Name = "mskCodigo";
             mskCodigo.Size = new Size(190, 23);
-            mskCodigo.TabIndex = 1;
+            mskCodigo.TabIndex = 0;
             // 
             // mskValor
             // 
             mskValor.Location = new Point(204, 147);
-            mskValor.Mask = "000000.00";
             mskValor.Name = "mskValor";
             mskValor.Size = new Size(190, 23);
             mskValor.TabIndex = 2;
@@ -97,7 +96,7 @@
             label1.Location = new Point(101, 92);
             label1.Name = "label1";
             label1.Size = new Size(97, 15);
-            label1.TabIndex = 4;
+            label1.TabIndex = 8;
             label1.Text = "Código de barras";
             // 
             // label2
@@ -106,7 +105,7 @@
             label2.Location = new Point(140, 126);
             label2.Name = "label2";
             label2.Size = new Size(58, 15);
-            label2.TabIndex = 5;
+            label2.TabIndex = 9;
             label2.Text = "Descrição";
             // 
             // label3
@@ -115,7 +114,7 @@
             label3.Location = new Point(121, 150);
             label3.Name = "label3";
             label3.Size = new Size(77, 15);
-            label3.TabIndex = 6;
+            label3.TabIndex = 10;
             label3.Text = "Valor unitário";
             // 
             // label4
@@ -124,7 +123,7 @@
             label4.Location = new Point(96, 184);
             label4.Name = "label4";
             label4.Size = new Size(102, 15);
-            label4.TabIndex = 7;
+            label4.TabIndex = 11;
             label4.Text = "Unidade de venda";
             // 
             // label5
@@ -133,7 +132,7 @@
             label5.Location = new Point(126, 208);
             label5.Name = "label5";
             label5.Size = new Size(72, 15);
-            label5.TabIndex = 8;
+            label5.TabIndex = 12;
             label5.Text = "Categoria ID";
             // 
             // label6
@@ -142,7 +141,7 @@
             label6.Location = new Point(104, 237);
             label6.Name = "label6";
             label6.Size = new Size(94, 15);
-            label6.TabIndex = 9;
+            label6.TabIndex = 13;
             label6.Text = "Estoque minimo";
             // 
             // btnInserir
@@ -150,7 +149,7 @@
             btnInserir.Location = new Point(254, 304);
             btnInserir.Name = "btnInserir";
             btnInserir.Size = new Size(94, 30);
-            btnInserir.TabIndex = 10;
+            btnInserir.TabIndex = 7;
             btnInserir.Text = "&Inserir";
             btnInserir.UseVisualStyleBackColor = true;
             btnInserir.Click += btnInserir_Click;
@@ -160,7 +159,7 @@
             txtEstoqueMinimo.Location = new Point(204, 234);
             txtEstoqueMinimo.Name = "txtEstoqueMinimo";
             txtEstoqueMinimo.Size = new Size(190, 23);
-            txtEstoqueMinimo.TabIndex = 11;
+            txtEstoqueMinimo.TabIndex = 5;
             // 
             // label7
             // 
@@ -168,7 +167,7 @@
             label7.Location = new Point(89, 266);
             label7.Name = "label7";
             label7.Size = new Size(109, 15);
-            label7.TabIndex = 12;
+            label7.TabIndex = 14;
             label7.Text = "Classe de Desconto";
             // 
             // FrmProduto
