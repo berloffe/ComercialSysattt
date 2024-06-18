@@ -354,7 +354,6 @@
             label6.Size = new Size(28, 15);
             label6.TabIndex = 10;
             label6.Text = "CEP";
-            label6.Click += label5_Click;
             // 
             // label13
             // 
@@ -364,7 +363,6 @@
             label13.Size = new Size(52, 15);
             label13.TabIndex = 10;
             label13.Text = "Tipo RES";
-            label13.Click += label5_Click;
             // 
             // label12
             // 
@@ -374,7 +372,6 @@
             label12.Size = new Size(44, 15);
             label12.TabIndex = 10;
             label12.Text = "Cidade";
-            label12.Click += label5_Click;
             // 
             // label14
             // 
@@ -384,7 +381,6 @@
             label14.Size = new Size(84, 15);
             label14.TabIndex = 10;
             label14.Text = "Complemento";
-            label14.Click += label5_Click;
             // 
             // label11
             // 
@@ -394,7 +390,6 @@
             label11.Size = new Size(38, 15);
             label11.TabIndex = 10;
             label11.Text = "Bairro";
-            label11.Click += label5_Click;
             // 
             // label9
             // 
@@ -404,7 +399,6 @@
             label9.Size = new Size(21, 15);
             label9.TabIndex = 10;
             label9.Text = "UF";
-            label9.Click += label5_Click;
             // 
             // label7
             // 
@@ -414,7 +408,6 @@
             label7.Size = new Size(51, 15);
             label7.TabIndex = 10;
             label7.Text = "Numero";
-            label7.Click += label5_Click;
             // 
             // label5
             // 
@@ -424,7 +417,6 @@
             label5.Size = new Size(69, 15);
             label5.TabIndex = 10;
             label5.Text = "Logradouro";
-            label5.Click += label5_Click;
             // 
             // btnAdiciona
             // 
@@ -455,7 +447,6 @@
             cmbTipoEndereco.Name = "cmbTipoEndereco";
             cmbTipoEndereco.Size = new Size(151, 24);
             cmbTipoEndereco.TabIndex = 7;
-            cmbTipoEndereco.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // txtUf
             // 
@@ -536,7 +527,6 @@
             Controls.Add(groupBox1);
             Name = "FrmCliente";
             Text = "FrmCliente";
-            Load += FrmCliente_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEnderecos).EndInit();
             tabControl1.ResumeLayout(false);
             tbpDadosPessoais.ResumeLayout(false);
