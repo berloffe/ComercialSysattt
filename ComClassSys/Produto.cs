@@ -73,5 +73,32 @@ namespace ComClassSys
             cmd.Parameters.AddWithValue("spclasse_desconto", ClasseDesconto);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
         }
+        public bool Editar(int id)
+        {
+            return true;
+        }
+        public static Produto ObterPorID(int id)
+        {
+            Produto produto = new Produto();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"select * from produtos where id ={id}";
+            var dr = cmd.ExecuteReader(); // retorno das consultas (se tiver)
+            while (dr.Read())
+            { 
+                    produto = new(dr.GetInt32(0)
+                    , dr.GetString(1)
+                    , dr.GetString(2)
+                    , dr.GetDouble(3)
+                    , dr.GetString(4)
+                    , dr.GetInt32(5)
+                    , dr.GetDouble(6)
+                    , dr.GetDouble(7)
+                    , dr.GetString(8)
+                    , dr.GetDateTime(9)
+                    );
+            }
+            return produto;
+        }
     }
 }
