@@ -59,6 +59,18 @@ namespace ComClassSys
             EstoqueMinimo = estoqueMinimo;
             ClasseDesconto = classeDesconto;
         }
+
+        public Produto(int id, string codBarras, string descricao, double valoUnit, string unidadeVenda, int categoriaId, double estoqueMinimo, double classeDesconto)
+        {
+            Id = id;
+            CodBarras = codBarras;
+            Descricao = descricao;
+            ValoUnit = valoUnit;
+            UnidadeVenda = unidadeVenda;
+            CategoriaId = categoriaId;
+            EstoqueMinimo = estoqueMinimo;
+            ClasseDesconto = classeDesconto;
+        }
         public void Inserir()
         {
             var cmd = Banco.Abrir();
@@ -100,5 +112,34 @@ namespace ComClassSys
             }
             return produto;
         }
+        /*public static List<Produto> ObterLista(string descricao = null);
+            {
+            List<Produto> lista = new List<Produto>();
+            var cmd = Banco.Abrir();
+            cmd.Command.Type = CommandType.Text;
+            if (descricao = null)
+            {
+                cmd.CommandText = "select * from produtos";
+            }
+            else
+            {
+                cmd.CommandText = $"select * from produtos where descricao like '%{descricao}%'";
+            }
+            var dr = cmd.ExecuteReader();
+            while(dr.Read())
+            {
+                lista.Add(new Produto(
+
+                    dr.GetInt32(0)
+                   , dr.GetString(1)
+                   , dr.GetString(2)
+                   , dr.GetDouble(3)
+                   , dr.GetString(4)
+                , Categoria.ObterPorId((5))
+                   , dr.GetDouble(6)
+                   , dr.GetDouble(7)
+                   ));
+            }
+            return lista;*/
+        }
     }
-}

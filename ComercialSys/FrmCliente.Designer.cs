@@ -183,7 +183,6 @@
             tbpDadosPessoais.TabIndex = 0;
             tbpDadosPessoais.Text = "Dados pessoais";
             tbpDadosPessoais.UseVisualStyleBackColor = true;
-            tbpDadosPessoais.Click += tbpDadosPessoais_Click;
             // 
             // txtClienteId
             // 
@@ -203,7 +202,6 @@
             btnEditar.TabIndex = 15;
             btnEditar.Text = "&Editar";
             btnEditar.UseVisualStyleBackColor = true;
-            btnEditar.Click += btnEditar_Click;
             // 
             // btnInsert
             // 
@@ -257,7 +255,6 @@
             label2.Size = new Size(36, 15);
             label2.TabIndex = 9;
             label2.Text = "Email";
-            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -267,7 +264,6 @@
             label1.Size = new Size(28, 15);
             label1.TabIndex = 8;
             label1.Text = "CPF";
-            label1.Click += label1_Click;
             // 
             // lblNome
             // 
@@ -277,7 +273,6 @@
             lblNome.Size = new Size(40, 15);
             lblNome.TabIndex = 7;
             lblNome.Text = "Nome";
-            lblNome.Click += lblNome_Click;
             // 
             // chkAtivo
             // 
@@ -426,7 +421,6 @@
             btnAdiciona.TabIndex = 9;
             btnAdiciona.Text = "Adicionar &Novo";
             btnAdiciona.UseVisualStyleBackColor = true;
-            btnAdiciona.Click += btnAdiciona_Click;
             // 
             // btnSalvar
             // 
@@ -504,7 +498,6 @@
             mxtCEP.Name = "mxtCEP";
             mxtCEP.Size = new Size(79, 23);
             mxtCEP.TabIndex = 0;
-            mxtCEP.MaskInputRejected += mxtCEP_MaskInputRejected;
             mxtCEP.Leave += mxtCEP_Leave;
             // 
             // groupBox1
@@ -517,7 +510,6 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // FrmCliente
             // 

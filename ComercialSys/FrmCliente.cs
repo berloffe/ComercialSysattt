@@ -71,44 +71,12 @@ namespace ComercialSys
                 , mstTelefone.Text
                 , txtEmail.Text
                 , dtpDataNasc.Value
-
                 );
             cliente.Inserir();
             if (cliente.Id > 0)
             {
                 MessageBox.Show($"Cliente {cliente.GetHashCode()} cadastro com sucesso");
             }
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-                 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAdiciona_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mxtCEP_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-
         }
 
         private void mxtCEP_Leave(object sender, EventArgs e)
@@ -124,16 +92,6 @@ namespace ComercialSys
                 txtNumero.Focus();
 
             }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbpDadosPessoais_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
