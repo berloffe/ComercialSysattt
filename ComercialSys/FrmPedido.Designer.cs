@@ -31,27 +31,27 @@
             groupBox1 = new GroupBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtNumero = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             txtVendedor = new TextBox();
             btnAbrir = new Button();
             groupBox2 = new GroupBox();
+            btnInserir = new Button();
+            txtQuantidade = new TextBox();
+            txtValorUnit = new TextBox();
+            label7 = new Label();
             label6 = new Label();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
+            txtHashCode = new TextBox();
+            txtDescricao = new TextBox();
             label5 = new Label();
             label4 = new Label();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
+            btnFinalizarP = new Button();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
-            label7 = new Label();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            button2 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -82,15 +82,15 @@
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 0;
             // 
-            // textBox1
+            // txtNumero
             // 
-            textBox1.Font = new Font("Segoe UI", 24F);
-            textBox1.Location = new Point(685, 27);
-            textBox1.Name = "textBox1";
-            textBox1.RightToLeft = RightToLeft.Yes;
-            textBox1.Size = new Size(100, 50);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "0";
+            txtNumero.Font = new Font("Segoe UI", 24F);
+            txtNumero.Location = new Point(685, 27);
+            txtNumero.Name = "txtNumero";
+            txtNumero.RightToLeft = RightToLeft.Yes;
+            txtNumero.Size = new Size(100, 50);
+            txtNumero.TabIndex = 1;
+            txtNumero.Text = "0";
             // 
             // label1
             // 
@@ -138,13 +138,13 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(textBox10);
-            groupBox2.Controls.Add(textBox9);
+            groupBox2.Controls.Add(btnInserir);
+            groupBox2.Controls.Add(txtQuantidade);
+            groupBox2.Controls.Add(txtValorUnit);
             groupBox2.Controls.Add(label7);
             groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(textBox7);
+            groupBox2.Controls.Add(txtHashCode);
+            groupBox2.Controls.Add(txtDescricao);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
             groupBox2.Location = new Point(12, 251);
@@ -153,6 +153,38 @@
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "Produto";
+            // 
+            // btnInserir
+            // 
+            btnInserir.Location = new Point(527, 42);
+            btnInserir.Name = "btnInserir";
+            btnInserir.Size = new Size(75, 23);
+            btnInserir.TabIndex = 8;
+            btnInserir.Text = "&Inserir";
+            btnInserir.UseVisualStyleBackColor = true;
+            // 
+            // txtQuantidade
+            // 
+            txtQuantidade.Location = new Point(436, 42);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(69, 23);
+            txtQuantidade.TabIndex = 7;
+            // 
+            // txtValorUnit
+            // 
+            txtValorUnit.Location = new Point(330, 42);
+            txtValorUnit.Name = "txtValorUnit";
+            txtValorUnit.Size = new Size(100, 23);
+            txtValorUnit.TabIndex = 6;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(436, 19);
+            label7.Name = "label7";
+            label7.Size = new Size(69, 15);
+            label7.TabIndex = 5;
+            label7.Text = "Quantidade";
             // 
             // label6
             // 
@@ -163,19 +195,19 @@
             label6.TabIndex = 4;
             label6.Text = "Valor Unitário";
             // 
-            // textBox8
+            // txtHashCode
             // 
-            textBox8.Location = new Point(15, 42);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(132, 23);
-            textBox8.TabIndex = 3;
+            txtHashCode.Location = new Point(15, 42);
+            txtHashCode.Name = "txtHashCode";
+            txtHashCode.Size = new Size(132, 23);
+            txtHashCode.TabIndex = 3;
             // 
-            // textBox7
+            // txtDescricao
             // 
-            textBox7.Location = new Point(153, 42);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(171, 23);
-            textBox7.TabIndex = 2;
+            txtDescricao.Location = new Point(153, 42);
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.Size = new Size(171, 23);
+            txtDescricao.TabIndex = 2;
             // 
             // label5
             // 
@@ -203,14 +235,14 @@
             dataGridView1.Size = new Size(616, 150);
             dataGridView1.TabIndex = 7;
             // 
-            // button1
+            // btnFinalizarP
             // 
-            button1.Location = new Point(646, 465);
-            button1.Name = "button1";
-            button1.Size = new Size(139, 46);
-            button1.TabIndex = 8;
-            button1.Text = "&Finalizar Pedido";
-            button1.UseVisualStyleBackColor = true;
+            btnFinalizarP.Location = new Point(646, 465);
+            btnFinalizarP.Name = "btnFinalizarP";
+            btnFinalizarP.Size = new Size(139, 46);
+            btnFinalizarP.TabIndex = 8;
+            btnFinalizarP.Text = "&Finalizar Pedido";
+            btnFinalizarP.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -234,38 +266,6 @@
             textBox6.Size = new Size(139, 34);
             textBox6.TabIndex = 11;
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(436, 19);
-            label7.Name = "label7";
-            label7.Size = new Size(69, 15);
-            label7.TabIndex = 5;
-            label7.Text = "Quantidade";
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(330, 42);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 6;
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(436, 42);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(69, 23);
-            textBox10.TabIndex = 7;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(527, 42);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 8;
-            button2.Text = "&Inserir";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // FrmPedido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -274,7 +274,7 @@
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
-            Controls.Add(button1);
+            Controls.Add(btnFinalizarP);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox2);
             Controls.Add(btnAbrir);
@@ -282,7 +282,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtNumero);
             Controls.Add(groupBox1);
             Name = "FrmPedido";
             Text = "FrmPedido";
@@ -301,7 +301,7 @@
         private GroupBox groupBox1;
         private TextBox textBox3;
         private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtNumero;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -309,18 +309,18 @@
         private Button btnAbrir;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
-        private Button button1;
+        private Button btnFinalizarP;
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
         private Label label5;
         private Label label4;
         private Label label6;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox10;
-        private TextBox textBox9;
+        private TextBox txtHashCode;
+        private TextBox txtDescricao;
+        private TextBox txtQuantidade;
+        private TextBox txtValorUnit;
         private Label label7;
-        private Button button2;
+        private Button btnInserir;
     }
 }
