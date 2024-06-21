@@ -63,11 +63,11 @@ namespace ComClassSys
             Id = Convert.ToInt32(cmd.ExecuteScalar());
         }
 
-        public static Pedido ObterPorId(int id)
+        public static List<Pedido> ObterPorId(int   Clienteid)
         {
             Pedido pedido = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"select * from pedidos where id = {id}";
+            cmd.CommandText = $"select * from pedidos where cliente_id = {Clienteid}";
             var dr = cmd.ExecuteReader();
             while(dr.Read()) 
             {
@@ -83,28 +83,70 @@ namespace ComClassSys
             return pedido;
         }
 
-        public static Pedido ObterPorCliente(int id)
+        public static List<Pedido> ObterPorCliente(int ClienteId)
         {
-            Pedido pedido = new();
-
-            return pedido;
+            List<Pedido> pedidos = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select * from pedidos where cliente_id = {ClienteId}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                pedidos.Add(new(dr.GetInt32(0)
+                    , Usuario.ObterPorId(dr.GetInt32(1))
+                    , Cliente.ObterPorId(dr.GetInt32(2))
+                    , dr.GetDateTime(3)
+                    , dr.GetString(4)
+                    , dr.GetDouble(5)
+                    , ItemPedido.ObterListaPorPedido(dr.GetInt32(0))
+                    ));
+            }
+            return pedidos;
         }
 
-        public static List<Pedido> ObterLista()
+        public static List<Pedido> ObterLista(string status = "")
         {
-            List<Pedido> lista = new();
-
-            return lista;
+            List<Pedido> pedidos = new();
+            var cmd = Banco.Abrir();
+            if (status == "")
+            {
+                cmd.CommandText = $"select from pedidos";
+            }
+            else 
+            { 
+                cmd.CommandText = $"select * from pedidos where status = {status}";
+            }
+            cmd.CommandText = $"select * from pedidos";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                pedidos.Add(new(dr.GetInt32(0)
+                    , Usuario.ObterPorId(dr.GetInt32(1))
+                    , Cliente.ObterPorId(dr.GetInt32(2))
+                    , dr.GetDateTime(3)
+                    , dr.GetString(4)
+                    , dr.GetDouble(5)
+                    , ItemPedido.ObterListaPorPedido(dr.GetInt32(0))
+                    ));
+            }
+            return pedidos;
         }
         public bool Alterar()
         {
-            
-            return true;
+            var com = Banco.Abrir();
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.CommandText = "sp_pedido_update";
+            com.Parameters.AddWithValue("spid", Id);
+            com.Parameters.AddWithValue("spusuario_id", Usuario.Id);
+            com.Parameters.AddWithValue("spcliente_id", Cliente.Id);
+            com.Parameters.AddWithValue("spstatus", Status);
+            com.Parameters.AddWithValue("spdesconto", Desconto);
+            return com.ExecuteNonQuery()>0?true:false;
         }
         public bool Alterar(string status)
         {
-
-            return true;
+            var com = Banco.Abrir();
+            com.CommandText = $"update pedidos set status =`{status} where id = {Id}";
+            return com.ExecuteNonQuery() > 0 ? true : false;
         }
 
         public double CalcularPedido(int id)

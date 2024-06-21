@@ -112,7 +112,7 @@ namespace ComClassSys
             }
             return produto;
         }
-        /*public static List<Produto> ObterLista(string descricao = null);
+       /*public static List<Produto> ObterLista(string descricao = null);
             {
             List<Produto> lista = new List<Produto>();
             var cmd = Banco.Abrir();
@@ -142,4 +142,5 @@ namespace ComClassSys
             }
             return lista;*/
         }
+       
     }

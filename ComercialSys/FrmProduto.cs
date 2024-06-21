@@ -114,6 +114,9 @@ namespace ComercialSys
 
         }
 
+        private void cmbUnidedeVendas_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 } 

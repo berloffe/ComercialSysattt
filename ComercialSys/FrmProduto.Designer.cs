@@ -104,6 +104,7 @@
             cmbUnidedeVendas.Name = "cmbUnidedeVendas";
             cmbUnidedeVendas.Size = new Size(190, 23);
             cmbUnidedeVendas.TabIndex = 3;
+            cmbUnidedeVendas.SelectedIndexChanged += cmbUnidedeVendas_SelectedIndexChanged;
             // 
             // label1
             // 

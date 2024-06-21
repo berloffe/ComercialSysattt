@@ -20,7 +20,7 @@ namespace ComClassSys
 
         // PROPRIEDADES
         public int Id { get; set; }
-        public Pedido Pedido { get; set; }
+        public int PedidoId { get; set; }
         public Produto Produto { get; set; }
         public double ValorUnit { get; set; }
         public double Quantidade { get; set; }
@@ -30,19 +30,19 @@ namespace ComClassSys
 
         public ItemPedido() { }
 
-        public ItemPedido(int id, Pedido pedido, Produto produto, double valorUnit, double quantidade, double desconto)
+        public ItemPedido(int id, int pedidoId, Produto produto, double valorUnit, double quantidade, double desconto)
         {
             Id = id;
-            Pedido = pedido;
+            PedidoId = pedidoId;
             Produto = produto;
             ValorUnit = valorUnit;
             Quantidade = quantidade;
             Desconto = desconto;
         }
 
-        public ItemPedido(Pedido pedido, Produto produto, double valorUnit, double quantidade, double desconto)
+        public ItemPedido(int pedidoId, Produto produto, double valorUnit, double quantidade, double desconto)
         {
-            Pedido = pedido;
+            PedidoId = pedidoId;
             Produto = produto;
             ValorUnit = valorUnit;
             Quantidade = quantidade;
@@ -59,7 +59,7 @@ namespace ComClassSys
 
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.CommandText = "sp_itempedido_insert";
-            cmd.Parameters.AddWithValue("sp_pedido_id", Pedido.Id);
+            cmd.Parameters.AddWithValue("sp_pedido_id", PedidoId);
             cmd.Parameters.AddWithValue("spproduto_id", Produto.Id);
             cmd.Parameters.AddWithValue("spquantidade_id", Quantidade);
             cmd.Parameters.AddWithValue("spdesconto_id", Desconto);
@@ -79,6 +79,18 @@ namespace ComClassSys
         public static List<ItemPedido> ObterListaPorPedido(int idPedido)
         {
             List<ItemPedido> itens = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select * from itempedido where pedido_id = {idPedido}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                itens.Add(new(dr.GetInt32(0)
+                    , dr.GetInt32(1)
+                    , Produto.ObterPorID(dr.GetInt32(2))
+                    , dr.GetDouble(3)
+                    , dr.GetDouble(4)
+                    , dr.GetDouble(5)));
+            }
 
             return itens;
         }
@@ -94,11 +106,13 @@ namespace ComClassSys
         // Excluir
         public void Remover(int id)
         {
-            var cmd = Banco.Abrir;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_itempedido_delete";
-            cmd.Parameters.AddWithValue("spid", id);
-            cmd.ExecuteNonQuery();
+            
+                var cmd = Banco.Abrir();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_itempedido_delete";
+                cmd.Parameters.AddWithValue("spid", id);
+                cmd.ExecuteNonQuery();
+            
         }
     }
 }
